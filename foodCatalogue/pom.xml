@@ -5,17 +5,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.8</version>
+		<version>3.2.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nisar</groupId>
-	<artifactId>resturant-listing</artifactId>
+	<artifactId>foodCatalogue</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Resturant Listing</name>
-	<description>Demo project for Spring Boot Resturant Listing</description>
+	<name>FoodCatalogue</name>
+	<description>Demo project for Spring Boot for food catalogue</description>
 	<properties>
 		<java.version>17</java.version>
-		<spring-cloud.version>2022.0.5</spring-cloud.version>
+		<spring-cloud.version>2023.0.0</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,17 +51,6 @@
 			<artifactId>mapstruct</artifactId>
 			<version>1.4.2.Final</version>
 		</dependency>
-		<dependency>
-			<groupId>jakarta.validation</groupId>
-			<artifactId>jakarta.validation-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.33</version>
-		</dependency>
-
-
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
