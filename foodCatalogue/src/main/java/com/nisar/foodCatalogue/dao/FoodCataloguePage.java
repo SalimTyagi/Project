@@ -29,4 +29,12 @@ public class FoodCataloguePage {
     public void setRestaurant(Restaurant restaurant) {
         this.restaurant = restaurant;
     }
+
+    @Override
+    public String toString() {
+        return "FoodCataloguePage{" +
+                "foodItemList=" + foodItemList +
+                ", restaurant=" + restaurant +
+                '}';
+    }
 }

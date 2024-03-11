@@ -19,6 +19,7 @@
         </processorPath>
         <module name="resturant-listing" />
         <module name="userInfo" />
+        <module name="foodCatalogue" />
       </profile>
     </annotationProcessing>
   </component>

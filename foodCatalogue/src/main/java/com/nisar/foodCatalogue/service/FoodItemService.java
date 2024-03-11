@@ -7,7 +7,6 @@ import com.nisar.foodCatalogue.entity.FoodItem;
 import com.nisar.foodCatalogue.mapper.FoodItemMapper;
 import com.nisar.foodCatalogue.repo.FoodItemRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -19,8 +18,6 @@ public class FoodItemService {
     private FoodItemRepo foodItemRepo;
     @Autowired
     private RestTemplate restTemplate;
-    @Value("${restaurantMSGetByIdUrl}")
-    private String restaurantGetByIdUrl;
 
     public FoodItemDto addFoodItem(FoodItemDto foodItemDto) {
         FoodItem foodItem = FoodItemMapper.INSTANCE.mapFoodItemDtoToFoodItem(foodItemDto);
@@ -42,7 +39,7 @@ public class FoodItemService {
     }
 
     private Restaurant fetchRestaurantById(Integer restaurantId) {
-        return restTemplate.getForObject(restaurantGetByIdUrl+restaurantId,Restaurant.class);
+        return restTemplate.getForObject("http://RESTAURANT-SERVICE/restaurant/getById/"+restaurantId,Restaurant.class);
     }
 
     private List<FoodItem> fetchFoodItemList(Integer restaurantId) {
